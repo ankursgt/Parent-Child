@@ -1,0 +1,17 @@
+<p>You selected {{identifier}}</p>
+<table border="1" align="center">
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Captain</th>
+    <th>Vice-Captain</th>
+  </tr>
+</thead>
+<tbody>
+<tr *ngFor="let player of players">
+  <td>{{player}}</td>  
+  <td><input type="radio" name="captain" (change)="setCaptain(player)"></td>
+  <td><input type="radio" name="vice-captain" (change)="setVCaptain(player)"></td>
+</tr>
+</tbody>
+</table>
